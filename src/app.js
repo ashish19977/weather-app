@@ -6,6 +6,8 @@ const getCordinates=require('./utilities/geocode.js')
 
 const app = express()
 
+const port=process.env.PORT||5050
+
 hbs.registerPartials(path.join(__dirname,'../templates/partials'))
 
 const staticpath = path.join(__dirname, '../public')
@@ -59,6 +61,6 @@ app.get("*", (req, res) => {
 })
 
 
-app.listen(5050, () => {
-    console.log("server is up")
+app.listen(port, () => {
+    console.log("server is up on "+port)
 })

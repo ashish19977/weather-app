@@ -1,5 +1,5 @@
 
-//    fetch('http://localhost:5050/weather?search=ambala').then((res) => {
+//    fetch('/weather?search=ambala').then((res) => {
 //     res.json().then(result=>{
 //   console.log(result)
 //     })
@@ -12,7 +12,7 @@ document.getElementById('search-formm').addEventListener('submit', () => {
     document.getElementById('placename').style.display = "flex"
     document.getElementById('placename').innerHTML='Fetching Weather Data ...'
     let search = document.getElementById('search').value
-    fetch('http://localhost:5050/weather?search=' + search).then((res)=> {
+    fetch('/weather?search=' + search).then((res)=> {
         res.json().then(result => {
             if (result.data.error)
             {
@@ -21,7 +21,6 @@ document.getElementById('search-formm').addEventListener('submit', () => {
                 
             }
             else {
-                console.log(result.data)
                 document.getElementById('placename').innerHTML = result.data.placename
                 document.getElementById("mini-data-div2").style.display = "flex"
                 

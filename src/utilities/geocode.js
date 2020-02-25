@@ -1,6 +1,5 @@
 const request=require('request')
 const getCordinates = (placename, callback) => {
-    console.log(placename)
     let geolocationurl="https://api.mapbox.com/geocoding/v5/mapbox.places/"+encodeURIComponent(placename)+".json?access_token=pk.eyJ1IjoiYXNoaXNoMTk5NyIsImEiOiJjazZuZTE3OWcwanJ1M2VseWl3ajM1NmR1In0.qVNeMhBuugUhvnNpbvw39w"
     request.get({ url: geolocationurl, json: true }, (error, Response) => {
         if (error)
