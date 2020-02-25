@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="icon" href="/img/icon.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="main-div">
+        {{>header}}
+        {{>minidata}}
+        {{>footer}}
+    </div>
+    {{!-- <div class="main-div">
+    {{>header}}
+    <form class="form-div" id="search-form">
+       <div class="form-group">
+  <input type="text" class="form-control" id="search" placeholder="Search An Address Like Ambala" required>
+  <button type="submit" id="submit-btn" class="btn btn-primary" style="margin-top: .5vh;">Get Weather</button>
+</div>
+    </form>
+    <div class="condition-div" id="no-response-div"></div>
+    <div class="condition-div" id="condition-div-id">Ambala, Haryana, India</div>
+    {{>footer}}  
+    </div> --}}
+</body>
+<script src="/js/main.js"></script>
+</html>
